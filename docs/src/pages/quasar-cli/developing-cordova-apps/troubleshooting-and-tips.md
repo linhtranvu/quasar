@@ -50,41 +50,7 @@ Could not find gradle wrapper within Android SDK. Might need to update your Andr
 Looked here: /home/your_user/Android/Sdk/tools/templates/gradle/wrapper
 Error: Some of requirements check failed
 ```
-
-This could have two different reasons: Usually the paths aren't configured correctly. The first step is to verify if your paths are set correctly. This can be done by running the following commands:
-
-``` bash
-$ echo $ANDROID_HOME
-
-# or
-
-$ echo $ANDROID_SDK_ROOT
-```
-
-The expected output should be a path similar to this `$HOME/Android/Sdk`. After this run:
-
-
-``` bash
-$ ls -la $ANDROID_HOME
-
-# or
-
-$ ls -la $ANDROID_SDK_ROOT
-```
-
-To ensure the folder contains the SDK. The expected output should contain folders like 'tools', 'sources', 'platform-tools', etc.
-
-``` bash
-$ echo $PATH
-```
-
-The output should contain each one entry for the Android SDK 'tools'-folder and 'platform-tools'-tools. This could look like this:
-
-``` bash
-/home/your_user/bin:/home/your_user/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/your_user/Android/Sdk/tools:/home/your_user/Android/Sdk/platform-tools
-```
-
-> If you ensured your paths are set correctly and still get the error on `cordova requirements` you can try the following fix: [Replacing the Android Studio 'tools' folder manually](https://github.com/meteor/meteor/issues/8464#issuecomment-288112504)
+This could be fixed by installing Gradle manually. Follow [Gradle install guide](Gradle install guide). Remember to configure your system environment for Gradle.
 
 ### Android Studio
 
